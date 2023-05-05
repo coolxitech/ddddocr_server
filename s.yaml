@@ -22,13 +22,13 @@ name: ddddocr-api
 access: "{{ access }}"
 
 vars: # 全局变量
-  region: "{{ region }}"
+  region: "cn-shanghai"
   service:
-    name: "{{ serviceName }}"
+    name: "dddocr"
     description: '图片文字识别API云函数版'
 
 services:
-  helloworld: # 业务名称/模块名称
+  ddddocr: # 业务名称/模块名称
     # 如果只想针对 helloworld 下面的业务进行相关操作，可以在命令行中加上 helloworld，例如：
     # 只对helloworld进行构建：s helloworld build
     # 如果不带有 helloworld ，而是直接执行 s build，工具则会对当前Yaml下，所有和 helloworld 平级的业务模块（如有其他平级的模块，例如下面注释的next-function），按照一定顺序进行 build 操作
@@ -47,8 +47,8 @@ services:
       region: ${vars.region}              # 关于变量的使用方法，可以参考：https://www.serverless-devs.com/serverless-devs/yaml#变量赋值
       service: ${vars.service}
       function:
-        name: "{{ functionName }}"
-        description: 'hello world by serverless devs'
+        name: "start"
+        description: '启动ddddocr服务'
         caPort: 9898
         memorySize: 256
         timeout: 60
