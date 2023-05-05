@@ -20,19 +20,19 @@ pip install -r requirements.txt -i https://pypi.douban.com/simple
 # --det 开启目标检测模式
 
 # 最简单运行方式，只开启ocr模块并以新模型计算
-python ocr_server.py --port 9898 --ocr
+python index.py --port 9898 --ocr
 
 # 开启ocr模块并使用旧模型计算
-python ocr_server.py --port 9898 --ocr --old
+python index.py --port 9898 --ocr --old
 
 # 只开启目标检测模块
-python ocr_server.py --port 9898  --det
+python index.py --port 9898  --det
 
 # 同时开启ocr模块以及目标检测模块
-python ocr_server.py --port 9898 --ocr --det
+python index.py --port 9898 --ocr --det
 
 # 同时开启ocr模块并使用旧模型计算以及目标检测模块
-python ocr_server.py --port 9898 --ocr --old --det
+python index.py --port 9898 --ocr --old --det
 
 ```
 
