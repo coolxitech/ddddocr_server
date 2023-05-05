@@ -42,7 +42,7 @@ services:
         description: '启动DDDDOCR API服务'
         codeUri: ./
         runtime: python3.10
-        handler: ocr_server.app
+        handler: index.app
         timeout: 60
       triggers:
         - name: httpTrigger
@@ -50,6 +50,7 @@ services:
           config:
             authType: anonymous
             method:
+              - GET
               - POST
       customDomains:
         - domainName: auto
