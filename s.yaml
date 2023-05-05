@@ -53,8 +53,6 @@ services:
         memorySize: 256
         timeout: 60
         runtime: custom-container
-        customContainerConfig:
-          image: "{{ acrRegistry }}"
         codeUri: ./
 #  next-function: # 第二个函数的案例，仅供参考
 #    # 如果在当前项目下执行 s deploy，会同时部署模块：
